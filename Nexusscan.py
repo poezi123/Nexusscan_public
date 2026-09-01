@@ -124,8 +124,8 @@ PURPLE = "\033[35m"
 colors = [RED, GREEN, BLUE, PURPLE]
 randomcolor = colors[random.randint(0, len(colors) - 1)]
 intro = """
-        Creator: S1BERIA                               VERSION: 3.0
-        Last Updated: 10.08.2026                       Hack the shit out of them
+        Creator: S1BERIA                               VERSION: 3.1
+        Last Updated: 01.09.2026                       Hack the shit out of them
 """
 auswahl = """
         ╔═══   Reconaissance    ═══╗  ╔═══     Offensive      ═══╗  ╔═══    Open Source Intelligence    ═══╗ ╔═══           Cryptography           ═══╗
