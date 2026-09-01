@@ -1,0 +1,7 @@
+colorama
+scapy
+tqdm
+pycryptodome
+distro
+sherlock-project
+PyQt5

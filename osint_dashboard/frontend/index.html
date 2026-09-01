@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>// OSINT_DASHBOARD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Animated hacker background -->
+  <canvas id="matrix"></canvas>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">▚</span>
+      <h1>OSINT<span class="accent">_</span>DASHBOARD</h1>
+    </div>
+    <div class="status">
+      <span class="dot"></span> SYSTEM ONLINE
+      <span class="clock" id="clock">--:--:--</span>
+    </div>
+  </header>
+
+  <p class="subtitle">
+    &gt; passive reconnaissance suite &nbsp;//&nbsp; web · ai · username · email · phone
+    <span class="blink">█</span>
+  </p>
+
+  <main class="grid">
+
+    <!-- BLOCK 1: WEB OSINT -->
+    <section class="card" data-accent="green">
+      <div class="card-head">
+        <h2>[01] WEB_OSINT</h2>
+        <span class="tag">SUBDOMAINS · WHOIS · DNS</span>
+      </div>
+      <form data-endpoint="web">
+        <input type="text" name="target" placeholder="example.com  /  https://target.tld"
+               autocomplete="off" spellcheck="false" />
+        <button type="submit">RUN SCAN</button>
+      </form>
+      <div class="output" id="out-web">
+        <div class="idle">// awaiting target domain…</div>
+      </div>
+    </section>
+
+    <!-- BLOCK 1B: AI OSINT ANALYST -->
+    <section class="card" data-accent="violet">
+      <div class="card-head">
+        <h2>[1B] AI_OSINT_ANALYST</h2>
+        <span class="tag">LOCAL AI · NO API KEY</span>
+      </div>
+      <div class="ai-backend" id="ai-backend">// checking engine status…</div>
+      <form data-endpoint="ai" class="form-ai">
+        <textarea name="data" rows="5"
+                  placeholder="Throw it all in: names · places · dates · usernames · notes · text snippets …"
+                  autocomplete="off" spellcheck="false"></textarea>
+        <input type="text" name="prompt"
+               placeholder="Prompt: what do you want to find out? (empty = automatic analysis)"
+               autocomplete="off" spellcheck="false" />
+        <label class="opt" title="Looks up detected entities in public sources (DuckDuckGo, Wikipedia, WHOIS/DNS, MX, platform profiles). Search terms leave your machine when it does.">
+          <input type="checkbox" name="web" checked />
+          <span>LIVE RESEARCH — query public sources (no API key)</span>
+        </label>
+        <button type="submit">ANALYZE</button>
+      </form>
+      <div class="output" id="out-ai">
+        <div class="idle">// paste free text + a prompt — the AI correlates &amp; analyzes…</div>
+      </div>
+    </section>
+
+    <!-- BLOCK 2: USERNAME OSINT -->
+    <section class="card" data-accent="cyan">
+      <div class="card-head">
+        <h2>[02] USERNAME_OSINT</h2>
+        <span class="tag">40+ PLATFORMS</span>
+      </div>
+      <form data-endpoint="username">
+        <input type="text" name="username" placeholder="target_handle"
+               autocomplete="off" spellcheck="false" />
+        <button type="submit">HUNT</button>
+      </form>
+      <div class="output" id="out-username">
+        <div class="idle">// awaiting username…</div>
+      </div>
+    </section>
+
+    <!-- BLOCK 3: EMAIL OSINT -->
+    <section class="card" data-accent="amber">
+      <div class="card-head">
+        <h2>[03] EMAIL_OSINT</h2>
+        <span class="tag">MX · GRAVATAR · ACCOUNTS</span>
+      </div>
+      <form data-endpoint="email">
+        <input type="text" name="email" placeholder="target@domain.tld"
+               autocomplete="off" spellcheck="false" />
+        <button type="submit">PROBE</button>
+      </form>
+      <div class="output" id="out-email">
+        <div class="idle">// awaiting email address…</div>
+      </div>
+    </section>
+
+    <!-- BLOCK 4: PHONE OSINT -->
+    <section class="card" data-accent="magenta">
+      <div class="card-head">
+        <h2>[04] PHONE_OSINT</h2>
+        <span class="tag">CARRIER · COUNTRY · TYPE</span>
+      </div>
+      <form data-endpoint="phone">
+        <input type="text" name="number" placeholder="+49 151 12345678"
+               autocomplete="off" spellcheck="false" />
+        <button type="submit">TRACE</button>
+      </form>
+      <div class="output" id="out-phone">
+        <div class="idle">// awaiting phone number (international format)…</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>OSINT_DASHBOARD v1.0</span>
+    <span class="warn">⚠ For authorized research &amp; educational use only.</span>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+httpx==0.28.1
+phonenumbers==8.13.52
+dnspython==2.7.0
+python-whois==0.9.5
+pycountry==24.6.1
+# KI-Analyse laeuft rein lokal (Ollama / OpenAI-kompatibler lokaler Server /
+# eingebauter Offline-Analyzer) und braucht keine zusaetzlichen Pakete und
+# keinen API-Key - die HTTP-Aufrufe gehen ueber httpx.

@@ -1,0 +1,86 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+# Virtual environments
+nexusvenv/
+venv/
+.venv/
+env/
+
+
+# =========================
+# Secrets / Credentials
+# =========================
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+
+secrets.json
+credentials.json
+token.json
+
+
+# =========================
+# Compiled / Build
+# =========================
+*.o
+*.so
+*.dll
+*.dylib
+
+build/
+dist/
+*.egg-info/
+
+
+# =========================
+# CVE Cache / Databases
+# =========================
+cve_exploit_database/cve_cache.sqlite3
+*.sqlite3
+*.db
+
+
+# =========================
+# Local NexusScan config
+# =========================
+nexus_config.json
+
+
+# =========================
+# IDE / OS
+# =========================
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+
+# =========================
+# Claude
+# =========================
+.claude/settings.local.json
+
+
+# =========================
+# Logs / Temporary files
+# =========================
+*.log
+*.tmp
+*.temp
+.cache/
+# Local pre-public backups
+*.before-public
+*.backup
