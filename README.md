@@ -1,7 +1,7 @@
 # NexusScan
 
 NexusScan is a Python-based cybersecurity toolkit for **security research, network analysis, OSINT, and authorized penetration testing**.
-
+![Nexusscan-Logo](assets/logo.png)
 ## Features
 
 * Port Scanner
@@ -20,7 +20,7 @@ NexusScan is a Python-based cybersecurity toolkit for **security research, netwo
 ## Installation
 
 ```bash
-git clone https://github.com/poezi123/Nexusscan_full.git
+git clone https://github.com/poezi123/Nexusscan_public.git
 cd NexusScan
 sudo python3 install.py
 ```
