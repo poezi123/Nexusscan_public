@@ -22,8 +22,7 @@ NexusScan is a Python-based cybersecurity toolkit for **security research, netwo
 ```bash
 git clone https://github.com/poezi123/Nexusscan_full.git
 cd NexusScan
-pip install -r requirements.txt
-python Nexusscan.py
+sudo python3 install.py
 ```
 
 Some network features require administrator/root privileges.
